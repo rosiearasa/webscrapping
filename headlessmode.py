@@ -5,8 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # headless cms
 option = webdriver.ChromeOptions()
-option.headless = True
-
+option.add_argument("--headless=new")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
 driver.get("https://www.rosiearasa.com")
 print(driver.page_source)
